@@ -245,7 +245,20 @@
 
     </div>
 
-    <div class="row"></div>
+    <div class="row justify-content-evenly mt-4 mb-4">
+      <div class="col-8 text-center m-auto">
+        <div class="tab mt-4 mb-4">
+          <button style="font-size: 14px;" class="tablinks text-uppercase fw-bold" onclick="openCity(event, 'London')">dental care</button>
+
+          <button style="font-size: 14px;" class="tablinks text-uppercase fw-bold" onclick="openCity(event, 'London')">health disease</button>
+
+          <button style="font-size: 14px;" class="tablinks text-uppercase fw-bold" onclick="openCity(event, 'London')">general treatment</button>
+
+          <button style="font-size: 14px;" class="tablinks text-uppercase fw-bold" onclick="openCity(event, 'London')">pharmacy store</button>
+     
+        </div>
+      </div>
+    </div>
 
     <div class="row mt-4 mb-4 m-auto d-flex justify-content-center">
       <div class="col-4" style="padding:50px; background-color: rgb(18, 71, 233);">
@@ -401,21 +414,21 @@
 
 
   <!-- description section-->
-  <div class="  container-fluid " style="background-image: url(./LeadZen/bg-image/hero-bg9.jpg) ; width: 100%; height: 50vh;background-size: cover; background-repeat: no-repeat;
+  <div class=" container-fluid " style="background-image: url(./LeadZen/bg-image/hero-bg9.jpg) ; width: 100%; height: 50vh;background-size: cover; background-repeat: no-repeat;
   background-position: center;">
     <div class="container">
       <div class="row ">
-        <div class="col-5 m-auto ">
+        <div class="col-5 m-auto d-flex justify-content-center ">
           <p class="mb-4 text-white" style="font-size: 32px; text-align-last: center;">Meeting the challenges of an ever-changing healthcare environment.</p>
        
         </div>
       </div>
 
-      <div class="row align-items-center">
+      <!-- <div class="row align-items-center">
         <div class="col-1 m-auto">
           <button type="button" class="btn fw-bold rounded-pill ps-4 pe-4" style="background-color: rgb(96, 202, 3);">Primary</button>
         </div>
-      </div>
+      </div> -->
     </div>
   </div>
 
@@ -589,6 +602,7 @@
     </div>
   </div>
 
+  <!---------- icon section ------------->
   <div class="container">
     <div class="row justify-content-evenly">
       <div class="col-6">
@@ -604,7 +618,7 @@
     </div>
   </div>
 
-
+  <!----------------- copy right section ----------------->
   <div class="container">
     <div class="row">
 
@@ -615,10 +629,26 @@
     </div>
   </div>
 
-  
+
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js"
     integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa"
     crossorigin="anonymous"></script>
-</body>
 
+    
+</body>
+<script>
+  function openCity(evt, cityName) {
+    var i, tabcontent, tablinks;
+    tabcontent = document.getElementsByClassName("tabcontent");
+    for (i = 0; i < tabcontent.length; i++) {
+      tabcontent[i].style.display = "none";
+    }
+    tablinks = document.getElementsByClassName("tablinks");
+    for (i = 0; i < tablinks.length; i++) {
+      tablinks[i].className = tablinks[i].className.replace(" active", "");
+    }
+    document.getElementById(cityName).style.display = "block";
+    evt.currentTarget.className += " active";
+  }
+  </script>
 </html>
